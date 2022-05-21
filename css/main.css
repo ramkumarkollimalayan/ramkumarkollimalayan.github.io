@@ -4,15 +4,15 @@ font-family: 'Grape Nuts', cursive;
 */
 
 body {
-    font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", cursive;
     font-size: 15px;
-    color: #1C2833;
+    color: #1c2833;
     position: relative;
 }
 
 body::before {
-    content: '';
-    background-image: url('../images/pattern-bg.svg');
+    content: "";
+    background-image: url("../images/pattern-bg.svg");
     background-position: center;
     background-repeat: repeat;
     background-color: #ffffff;
@@ -25,7 +25,7 @@ body::before {
 }
 
 .fullname {
-    font-family: 'Grape Nuts', cursive;
+    font-family: "Grape Nuts", cursive;
     font-size: 72px;
     line-height: 72px;
     margin-bottom: 10px;
@@ -42,34 +42,34 @@ header .navbar {
 }
 
 footer .navbar {
-    background-color: #1C2833;
+    background-color: #1c2833;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
 a {
-    color: #1C2833;
+    color: #1c2833;
 }
 
 a:hover,
 a:focus {
-    color: #1C2833;
+    color: #1c2833;
     text-decoration: none;
 }
 
 .navbar-nav .nav-link {
-    color: #1C2833;
+    color: #1c2833;
     text-transform: capitalize;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .active>.nav-link {
-    color: #1ABC9C;
+.navbar-light .navbar-nav .active > .nav-link {
+    color: #1abc9c;
 }
 
 .navbar-light .navbar-brand {
-    color: #1ABC9C;
+    color: #1abc9c;
     font-weight: 700;
     font-size: 20px;
 }
@@ -85,7 +85,7 @@ ul.social-list {
 ul.social-list li {
     border-radius: 50%;
     background-color: #ffffff;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.20);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     width: 60px;
     height: 60px;
     text-align: center;
@@ -95,7 +95,7 @@ ul.social-list li {
 }
 
 ul.social-list li a:hover {
-    color: #1ABC9C;
+    color: #1abc9c;
 }
 
 .skill-list {
@@ -113,13 +113,13 @@ ul.social-list li a:hover {
     box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.11);
     padding: 10px 25px;
     font-size: 15px;
-    color: #1C2833;
+    color: #1c2833;
     margin-right: 25px;
     margin-bottom: 25px;
 }
 
 .skill-list li:hover {
-    color: #1ABC9C;
+    color: #1abc9c;
 }
 
 .skill-list li i {
@@ -138,7 +138,7 @@ ul.social-list li a:hover {
 }
 
 .site-color {
-    color: #1ABC9C;
+    color: #1abc9c;
 }
 
 .reachme > a {
@@ -147,7 +147,7 @@ ul.social-list li a:hover {
 }
 
 .reachme > a:hover {
-    color: #1ABC9C;
+    color: #1abc9c;
 }
 
 footer {
@@ -157,15 +157,86 @@ footer {
 
 main {
     margin-top: 56px;
+    overflow: hidden;
 }
 
 .author img {
-    opacity: 0.5;
+    opacity: 0.65;
+}
+
+.btn-outline-green {
+    border-radius: 0;
+    border: 2px solid #1abc9c;
+    color: #1abc9c;
+}
+
+.sec-title {
+    font-family: "Grape Nuts", cursive;
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.navbar-toggler {
+    padding: 0;
+    border: 0;
+}
+
+.navbar-toggler label {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 40px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar-toggler label span {
+    background: #1abc9c;
+    border-radius: 10px;
+    height: 5px;
+    margin: 3px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.navbar-toggler span:nth-of-type(1) {
+    width: 50%;
+}
+
+.navbar-toggler span:nth-of-type(2) {
+    width: 100%;
+}
+
+.navbar-toggler span:nth-of-type(3) {
+    width: 75%;
+}
+
+.navbar-toggler input[type="checkbox"] {
+    display: none;
+}
+
+.navbar-toggler input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(11px, 13px);
+}
+
+.navbar-toggler input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg);
+}
+
+.navbar-toggler input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(-16px, -20px) rotatez(45deg);
 }
 
 @media (max-width: 767px) {
+    .navbar .navbar-collapse {
+        height: 100vh;
+    }
     section .vh-100 {
-        height: auto!important;
+        height: auto !important;
         margin-top: 25px;
         margin-bottom: 25px;
     }
@@ -182,8 +253,17 @@ main {
 }
 
 @media (max-width: 575px) {
-    .navbar-light .navbar-brand {
-        font-size: 17px;
+    .sec-title {
+        text-align: center;
+    }
+    .reachme {
+        text-align: center;
+    }
+    .col-lg-8.aos-init {
+        text-align: center;
+    }
+    .reachme ul.social-list {
+        justify-content: center;
     }
     .reachme > a {
         font-size: 26px;
@@ -201,9 +281,6 @@ main {
 }
 
 @media (max-width: 414px) {
-    .navbar-light .navbar-brand {
-        font-size: 16px;
-    }
     .reachme > a {
         font-size: 24px;
     }
@@ -216,17 +293,16 @@ main {
     }
 }
 
-
 @media (max-width: 359px) {
-    .navbar-light .navbar-brand {
-        font-size: 14px;
-    }
     .reachme > a {
         font-size: 20px;
     }
     .fullname {
         font-size: 56px;
         line-height: 56px;
+    }
+    .myrole {
+        font-size: 22px;
     }
 }
 
@@ -235,7 +311,7 @@ main {
         font-size: 46px;
     }
     section .vh-100 {
-        height: auto!important;
+        height: auto !important;
         margin-top: 100px;
         margin-bottom: 100px;
     }
@@ -253,8 +329,8 @@ main {
         position: relative;
     }
     .navbar-light .navbar-nav .nav-item::after {
-        content: '';
-        background-color: #1ABC9C;
+        content: "";
+        background-color: #1abc9c;
         width: 5px;
         height: 5px;
         border-radius: 50%;
