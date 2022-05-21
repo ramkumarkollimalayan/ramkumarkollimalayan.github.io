@@ -1,5 +1,11 @@
 
 $(function() {
+    AOS.init();
+    
+    $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
+
     $('a[href*="#"]').bind('click', function(e) {
         e.preventDefault();
 
