@@ -4,7 +4,7 @@ $(function() {
         e.preventDefault();
 
         var target = $(this).attr("href"); 
-        $('html, body').stop().animate({
+        $('html, body').animate({
                 scrollTop: $(target).offset().top
         }, 600, function() {
                 location.hash = target;
@@ -18,10 +18,9 @@ $(function() {
 
         $('section').each(function(i) {
             if ($(this).position().top <= scrollDistance) {
-                    $('.nav-item.active').removeClass('active');
-                    $('.nav-item').eq(i).addClass('active');
+                $('.nav-item.active').removeClass('active');
+                $('.nav-item').eq(i).addClass('active');
             }
         });
     }).scroll();
-
 });
