@@ -1,0 +1,60 @@
+/* 
+font-family: 'Arimo', sans-serif;
+font-family: 'Assistant', sans-serif; 
+*/
+
+body {
+    font-family: "Assistant", sans-serif;
+    font-size: 18px;
+    color: #1d1d1b;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+dl,
+ol,
+ul {
+    margin-bottom: 0;
+    padding-right: 0;
+}
+
+
+/* Responsive */
+@media (max-width:767px) {
+
+}
+
+@media (min-width:576px) and (max-width:767px) {
+
+}
+
+@media (max-width:575px) {
+
+}
+
+@media (max-width:374px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) and (max-width:991px) {
+
+}
+
+@media (min-width:992px) {
+
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+
+}
+
+@media (min-width:1200px) {
+
+}
+
