@@ -9,6 +9,16 @@ $(function () {
   });
 
   // Navigation
+  $("#scrolldown").bind("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate(
+          {
+              scrollTop: $(".about").offset().top - 62,
+          },
+          1000
+      );
+  });
+
   $("#about").bind("click", function (e) {
       e.preventDefault();
       $("html, body").animate(
@@ -24,6 +34,16 @@ $(function () {
       $("html, body").animate(
           {
               scrollTop: $(".skills").offset().top - 62,
+          },
+          1000
+      );
+  });
+
+  $("#myworks").bind("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate(
+          {
+              scrollTop: $(".myworks").offset().top - 62,
           },
           1000
       );
@@ -119,4 +139,23 @@ $(function () {
           counted = 1;
       }
   });
+
+  // Portfolio Filter
+  $('.filters ul li').click(function(){
+    $('.filters ul li').removeClass('active');
+    $(this).addClass('active');
+    
+    var data = $(this).attr('data-filter');
+    $grid.isotope({
+      filter: data
+    })
+  });
+  
+  var $grid = $(".grid").isotope({
+    itemSelector: ".all",
+    percentPosition: true,
+    masonry: {
+      columnWidth: ".all"
+    }
+  })
 });
